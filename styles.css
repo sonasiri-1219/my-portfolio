@@ -1,153 +1,154 @@
 :root {
-    --primary-color: #0077cc;
-    --background: #f5f7fa;
-    --text-color: #333;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--background);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 960px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  header {
-    background-color: white;
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  header h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--primary-color);
-  }
-  
+  --primary-color: #0077cc; /* Main accent color used throughout the site */
+  --background: #f5f7fa;    /* Light background for body */
+  --text-color: #333;       /* Standard dark text color for readability */
+}
+
+* { /* Reset and global box-sizing */
+  box-sizing: border-box; /* Ensures padding and border are included in total width/height */
+  margin: 0;              /* Remove default margin */
+  padding: 0;             /* Remove default padding */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif; /* Modern, clean font */
+  background-color: var(--background); /* Use light background defined in :root */
+  color: var(--text-color);            /* Set text color */
+  line-height: 1.6;                    /* Improve text readability */
+}
+
+.container {
+  width: 90%;               /* Responsive width with some padding on sides */
+  max-width: 960px;         /* Prevents layout from stretching too wide */
+  margin: auto;             /* Center the container */
+  padding: 20px;            /* Space inside the container */
+}
+
+header {
+  background-color: white;      /* Clean white background for header */
+  padding: 20px 0;              /* Vertical padding */
+  border-bottom: 1px solid #ddd; /* Light bottom border for separation */
+}
+
+header h1 {
+  text-align: center;           /* Center the main heading */
+  font-size: 2rem;              /* Larger font size */
+  color: var(--primary-color);  /* Use accent color for emphasis */
+}
+
+nav ul {
+  display: flex;                /* Flex layout for horizontal nav links */
+  justify-content: center;     /* Center nav items */
+  list-style: none;            /* Remove bullets */
+  margin-top: 10px;            /* Space above nav bar */
+}
+
+nav ul li {
+  margin: 0 15px;              /* Horizontal spacing between nav items */
+}
+
+nav ul li a {
+  text-decoration: none;       /* Remove underline from links */
+  color: var(--text-color);    /* Use default text color */
+  font-weight: bold;           /* Make links bold */
+}
+
+main section {
+  margin: 40px 0;              /* Vertical spacing between sections */
+}
+
+h2 {
+  color: var(--primary-color); /* Section headings in accent color */
+  margin-bottom: 20px;         /* Space below heading */
+}
+
+.skills-list {
+  display: flex;       /* Layout skills in a row */
+  flex-wrap: wrap;     /* Wrap to next line if needed */
+  gap: 10px;           /* Space between skill items */
+}
+
+.skills-list li {
+  background-color: white;     /* White background for contrast */
+  border: 1px solid #ccc;      /* Light border */
+  padding: 8px 12px;           /* Inner spacing */
+  border-radius: 5px;          /* Rounded corners */
+}
+
+.project-card {
+  background: white;                    /* Card background */
+  padding: 20px;                        /* Inner padding */
+  margin-bottom: 20px;                 /* Space between project cards */
+  border-left: 5px solid var(--primary-color); /* Colored left border for style */
+  border-radius: 5px;                  /* Rounded corners */
+}
+
+.project-card a {
+  color: var(--primary-color);     /* Make links match theme color */
+  text-decoration: underline;      /* Underline for visibility */
+}
+
+form input, form textarea {
+  width: 100%;                /* Full width inputs */
+  padding: 10px;              /* Inner spacing */
+  margin-top: 10px;           /* Space above input */
+  margin-bottom: 15px;        /* Space below input */
+  border: 1px solid #ccc;     /* Standard border */
+  border-radius: 5px;         /* Rounded corners */
+}
+
+form button {
+  background-color: var(--primary-color); /* Button background color */
+  color: white;                           /* Button text color */
+  padding: 10px 15px;                     /* Padding inside button */
+  border: none;                           /* No border */
+  border-radius: 5px;                     /* Rounded corners */
+  cursor: pointer;                        /* Cursor change on hover */
+}
+
+form button:hover {
+  background-color: #005fa3; /* Darker shade on hover for effect */
+}
+
+footer {
+  background-color: #eee;     /* Light gray background */
+  padding: 20px 0;            /* Top and bottom padding */
+  text-align: center;         /* Centered text */
+  font-size: 0.9rem;          /* Slightly smaller font */
+  color: #666;                /* Muted text color */
+}
+
+@media (max-width: 600px) {
   nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 10px;
+    flex-direction: column;   /* Stack nav links vertically on small screens */
+    align-items: center;      /* Center items */
   }
-  
+
   nav ul li {
-    margin: 0 15px;
+    margin: 10px 0;           /* Space between stacked nav items */
   }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-  }
-  
-  main section {
-    margin: 40px 0;
-  }
-  
-  h2 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-  }
-  
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .skills-list li {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    border-radius: 5px;
-  }
-  
-  .project-card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid var(--primary-color);
-    border-radius: 5px;
-  }
-  
-  .project-card a {
-    color: var(--primary-color);
-    text-decoration: underline;
-  }
-  
-  form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  form button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #005fa3;
-  }
-  
-  footer {
-    background-color: #eee;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  @media (max-width: 600px) {
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav ul li {
-      margin: 10px 0;
-    }
-  }
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  .text {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .profile-img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
+/* Header content layout styling */
+.header-content {
+  display: flex;                  /* Flexbox layout */
+  align-items: center;           /* Vertically center items */
+  justify-content: space-between;/* Space between text and image */
+  flex-wrap: wrap;               /* Allow wrapping on smaller screens */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.text {
+  flex: 1;                        /* Takes remaining space */
+  text-align: left;              /* Align text to left */
+}
+
+.profile-img {
+  width: 140px;                  /* Fixed width */
+  height: 140px;                 /* Fixed height */
+  object-fit: cover;             /* Maintain aspect ratio, fill container */
+  border-radius: 50%;            /* Circular image */
+  border: 4px solid white;       /* White border around image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+}
