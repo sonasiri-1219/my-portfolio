@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #0077cc;
+    --background: #f5f7fa;
+    --text-color: #333;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  header h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  main section {
+    margin: 40px 0;
+  }
+  
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skills-list li {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  .project-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+  }
+  
+  .project-card a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #005fa3;
+  }
+  
+  footer {
+    background-color: #eee;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .profile-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
